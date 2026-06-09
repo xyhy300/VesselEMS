@@ -7,6 +7,10 @@ const DeptManage = () => import('../views/workspace/DeptManage.vue')
 const DocumentManage = () => import('../views/workspace/DocumentManage.vue')
 const UserProfile = () => import('../views/workspace/UserProfile.vue')
 const ConfigManage = () => import('../views/workspace/ConfigManage.vue')
+const DataSource = () => import('../views/workspace/DataSource.vue')
+const NLQuery = () => import('../views/workspace/NLQuery.vue')
+const Dialog = () => import('../views/workspace/Dialog.vue')
+const Model = () => import('../views/workspace/Model.vue')
 
 export default [
   { path: 'dashboard', name: 'Dashboard', component: Dashboard, meta: { title: '仪表盘' } },
@@ -17,5 +21,9 @@ export default [
   { path: 'depts', name: 'DeptManage', component: DeptManage, meta: { title: '部门管理' } },
   { path: 'documents', name: 'DocumentManage', component: DocumentManage, meta: { title: '文档管理' } },
   { path: 'profile', name: 'UserProfile', component: UserProfile, meta: { title: '用户个人中心' } },
-  { path: 'config', name: 'ConfigManage', component: ConfigManage, meta: { title: '系统配置' } }
+  { path: 'config', name: 'ConfigManage', component: ConfigManage, meta: { title: '系统配置' } },
+  { path: 'datasources', name: 'DataSource', component: DataSource, meta: { title: '数据源管理' } },
+  { path: 'nlquery', name: 'NLQuery', component: NLQuery, meta: { title: '自然语言查询' } },
+  { path: 'dialogs', name: 'Dialog', component: Dialog, meta: { title: '查询历史' } },
+  { path: 'models', name: 'Model', component: Model, meta: { title: '模型配置' } }
 ]

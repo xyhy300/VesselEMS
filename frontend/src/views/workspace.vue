@@ -37,6 +37,17 @@
           <el-menu-item v-if="hasMenu(26)" index="/workspace/config">系统配置</el-menu-item>
         </el-sub-menu>
 
+        <el-sub-menu index="nl2sql" v-if="hasMenu(4)">
+          <template #title>
+            <el-icon><ChatDotRound /></el-icon>
+            <span>NL2SQL分析</span>
+          </template>
+          <el-menu-item v-if="hasMenu(41)" index="/workspace/datasources">数据源管理</el-menu-item>
+          <el-menu-item v-if="hasMenu(42)" index="/workspace/nlquery">自然语言查询</el-menu-item>
+          <el-menu-item v-if="hasMenu(43)" index="/workspace/dialogs">查询历史</el-menu-item>
+          <el-menu-item v-if="hasMenu(44)" index="/workspace/models">模型配置</el-menu-item>
+        </el-sub-menu>
+
         <el-sub-menu index="rag" v-if="hasMenu(3)">
           <template #title>
             <el-icon><Cpu /></el-icon>
@@ -115,7 +126,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
   Ship, DataBoard, Setting, Cpu, User, Fold, Expand,
-  UserFilled, ArrowDown, SwitchButton
+  UserFilled, ArrowDown, SwitchButton, ChatDotRound
 } from '@element-plus/icons-vue'
 import { userStore, logout } from '../stores/user.js'
 import { hasPermission, hasMenu, loadPermissions, permissionStore } from '../stores/permissions.js'
